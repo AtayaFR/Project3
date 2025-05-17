@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <!-- Tombol Navigation Drawer -->
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@drawable/setting"
+            android:contentDescription="setting"/>
+
+        <!-- Logo dan Tombol Hijau -->
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/logo" />
+
+            <ImageButton
+                android:id="@+id/btn_undertone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@null"
+                android:src="@drawable/undertones"
+                android:contentDescription="Undertones Button"/>
+
+            <ImageButton
+                android:id="@+id/btn_skinseason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@null"
+                android:src="@drawable/skinbutton"
+                android:contentDescription="Skin Season Button"/>
+
+            <ImageButton
+                android:id="@+id/btn_faceshape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@null"
+                android:src="@drawable/face_shape"
+                android:contentDescription="Face Shape Button"/>
+
+            <ImageButton
+                android:id="@+id/btn_bodyshape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@null"
+                android:src="@drawable/body_shape"
+                android:contentDescription="Body Shape Button"/>
+
+            <ImageButton
+                android:id="@+id/btn_findstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/find_style"
+                android:contentDescription="Find Style Button"/>
+        </LinearLayout>
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/footer" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#311B92"
+        app:menu="@menu/drawer_menu"
+        android:fitsSystemWindows="true"
+        android:paddingTop="32dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+</androidx.drawerlayout.widget.DrawerLayout>
